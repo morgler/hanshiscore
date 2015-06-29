@@ -1,33 +1,121 @@
-- @title = "Middleman Twitter Bootstrap Success"
-- @bodyclass = "newproject"
-
-.hero-unit
-  :markdown
-    #### This project is bootstrapped!
-
-:markdown
-  ## Setup
-  
-  Now setup your blog as described in [the middleman blogging extension documentation](http://middlemanapp.com/extensions/blog/) 
-  
-  ### Views & Layouts
-
-  Your source files are stored in the <kbd>source</kbd> folder. The main layout
-  file for this project is <kbd>source/layout.haml</kbd>.
-
-:markdown
-  ### Stylesheets, Sass &amp; Compass
-
-  This project is pre-configured for [Sass](http://sass-lang.com) and
-  [Compass](http://compass-style.org). Store your <kbd>sass</kbd> and
-  <kbd>scss</kbd> files in the <kbd>source/stylesheets</kbd> directory.
-
-  Twitter bootstrap styles are pulled in via the [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass)
-  gem.
-  
-  The <kbd>source/stylesheets/screen.css.sass</kbd> stylesheet shows how to customise twitter bootstrap
-  styles using the variables that are provided for precisely this purpose. 
-
-  Version 3
-
-  
+- @title = "Hans Hiscore - Retro Game Music"
+    
+%header
+  .header-content
+    .header-content-inner
+      %h1 Your Favorite Source of Free Bootstrap Themes
+      %hr
+        %p Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!
+        %a.btn.btn-primary.btn-xl.page-scroll{:href => "#about"} Find Out More
+%section#about.bg-primary
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2.text-center
+        %h2.section-heading We've got what you need!
+        %hr.light
+          %p.text-faded Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!
+          %a.btn.btn-default.btn-xl{:href => "#"} Get Started!
+%section#services
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading At Your Service
+        %hr.primary
+  .container
+    .row
+      .col-lg-3.col-md-6.text-center
+        .service-box
+          %i.fa.fa-4x.fa-diamond.wow.bounceIn.text-primary
+          %h3 Sturdy Templates
+          %p.text-muted Our templates are updated regularly so they don't break.
+      .col-lg-3.col-md-6.text-center
+        .service-box
+          %i.fa.fa-4x.fa-paper-plane.wow.bounceIn.text-primary{"data-wow-delay" => ".1s"}
+          %h3 Ready to Ship
+          %p.text-muted You can use this theme as is, or you can make changes!
+      .col-lg-3.col-md-6.text-center
+        .service-box
+          %i.fa.fa-4x.fa-newspaper-o.wow.bounceIn.text-primary{"data-wow-delay" => ".2s"}
+          %h3 Up to Date
+          %p.text-muted We update dependencies to keep things fresh.
+      .col-lg-3.col-md-6.text-center
+        .service-box
+          %i.fa.fa-4x.fa-heart.wow.bounceIn.text-primary{"data-wow-delay" => ".3s"}
+          %h3 Made with Love
+          %p.text-muted You have to make your websites with love these days!
+%section#portfolio.no-padding
+  .container-fluid
+    .row.no-gutter
+      .col-lg-4.col-sm-6
+        %a.portfolio-box{:href => "#"}
+          %img.img-responsive{:alt => "", :src => "images/portfolio/1.jpg"}
+            .portfolio-box-caption
+              .portfolio-box-caption-content
+                .project-category.text-faded
+                  Category
+                .project-name
+                  Project Name
+      .col-lg-4.col-sm-6
+        %a.portfolio-box{:href => "#"}
+          %img.img-responsive{:alt => "", :src => "images/portfolio/2.jpg"}
+            .portfolio-box-caption
+              .portfolio-box-caption-content
+                .project-category.text-faded
+                  Category
+                .project-name
+                  Project Name
+      .col-lg-4.col-sm-6
+        %a.portfolio-box{:href => "#"}
+          %img.img-responsive{:alt => "", :src => "images/portfolio/3.jpg"}
+            .portfolio-box-caption
+              .portfolio-box-caption-content
+                .project-category.text-faded
+                  Category
+                .project-name
+                  Project Name
+      .col-lg-4.col-sm-6
+        %a.portfolio-box{:href => "#"}
+          %img.img-responsive{:alt => "", :src => "images/portfolio/4.jpg"}
+            .portfolio-box-caption
+              .portfolio-box-caption-content
+                .project-category.text-faded
+                  Category
+                .project-name
+                  Project Name
+      .col-lg-4.col-sm-6
+        %a.portfolio-box{:href => "#"}
+          %img.img-responsive{:alt => "", :src => "images/portfolio/5.jpg"}
+            .portfolio-box-caption
+              .portfolio-box-caption-content
+                .project-category.text-faded
+                  Category
+                .project-name
+                  Project Name
+      .col-lg-4.col-sm-6
+        %a.portfolio-box{:href => "#"}
+          %img.img-responsive{:alt => "", :src => "images/portfolio/6.jpg"}
+            .portfolio-box-caption
+              .portfolio-box-caption-content
+                .project-category.text-faded
+                  Category
+                .project-name
+                  Project Name
+%aside.bg-dark
+  .container.text-center
+    .call-to-action
+      %h2 Free Download at Start Bootstrap!
+      %a.btn.btn-default.btn-xl.wow.tada{:href => "#"} Download Now!
+%section#contact
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2.text-center
+        %h2.section-heading Let's Get In Touch!
+        %hr.primary
+          %p Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!
+      .col-lg-4.col-lg-offset-2.text-center
+        %i.fa.fa-phone.fa-3x.wow.bounceIn
+        %p 123-456-6789
+      .col-lg-4.text-center
+        %i.fa.fa-envelope-o.fa-3x.wow.bounceIn{"data-wow-delay" => ".1s"}
+        %p
+          %a{:href => "mailto:your-email@your-domain.com"} feedback@startbootstrap.com

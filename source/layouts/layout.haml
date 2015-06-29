@@ -1,54 +1,59 @@
-<!DOCTYPE html>
-%html{ :lang => 'en' }
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "author", :content => ""}
+    %meta{:name =>"viewport", :content => "width=device-width, initial-scale=1.0"}
+    %title= @title
 
-%head
-  %meta{:charset => "utf-8"}
-  %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge,chrome=1"}
+    / Bootstrap Core CSS
+    = stylesheet_link_tag "theme/bootstrap.min.css"
 
-  -# Pull in the page title
-  %title= @title
+    / Custom Fonts
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic", :rel => "stylesheet", :type => "text/css"}
 
-  %meta{:name => "description", :content => ""}
-  %meta{:name => "author", :content => ""}
-  %meta{:name =>"viewport", :content => "width=device-width, initial-scale=1.0"}
+    = stylesheet_link_tag "font-awesome/css/font-awesome.min.css"
+    / Plugin CSS
+    = stylesheet_link_tag "theme/animate.min.css"
+    / Custom CSS
+    = stylesheet_link_tag "theme/creative.css"
+    /= stylesheet_link_tag "screen"
 
-  -# Place favicon.ico and apple-touch-icon.png in the root directory
 
-  = stylesheet_link_tag "screen"
+    / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    / WARNING: Respond.js doesn't work if you view the page via file://
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  %body#page-top
 
-%body
-  .container
-    .navbar.navbar-inverse.navbar-fixed-top
-      .navbar-inner
-        .container
-          %a.btn.btn-navbar{ 'data-toggle' => "collapse",  "data-target" => ".nav-collapse" }
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand{ "href" =>"#"} Your Site Name
-          .nav-collapse.collapse
-            %ul.nav
-              %li.active
-                %a{ "href" =>"#" } Home
-              %li
-                %a{ "href" => "#"} About
-              %li
-                %a{ "href" => "#" } Contact
-    %h1= @title
-    ~ yield
+    = partial "navigation"
 
-    %footer
-      %p &copy; #{copyright_years(2011)} MiddlemanTwitterBoostrapUser
+    = yield
 
-  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
-  :javascript
-    window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.8.3.min.js"><\/script>')
+    = partial "footer"
 
-  = javascript_include_tag "plugins", "script"
-  = javascript_include_tag "bootstrap.js"
-  <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/tomorrow-night.min.css">
-  <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-  %script hljs.initHighlightingOnLoad();
+    / jQuery
+    %script{:src => "javascripts/theme/jquery.js"}
+    / Bootstrap Core JavaScript
+    = javascript_include_tag "plugins", "script"
+    = javascript_include_tag "bootstrap.js"
+    / Plugin JavaScript
+    %script{:src => "javascripts/theme/jquery.easing.min.js"}
+    %script{:src => "javascripts/theme/jquery.fittext.js"}
+    %script{:src => "javascripts/theme/wow.min.js"}
+    / Custom Theme JavaScript
+    %script{:src => "javascripts/theme/creative.js"}
+
+    -# <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/tomorrow-night.min.css">
+    -# <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    -# %script hljs.initHighlightingOnLoad();
 
 
   -# Google Analytics: change UA-XXXXX-X to be your site's ID.
