@@ -1,0 +1,39 @@
+$color1: #004478
+$color2: #b2341f
+$color3: #e39c07
+$color4: #4f4d40
+$color5: 6b231b
+
+a
+  color: $color2
+
+  &:hover, &:focus
+    color: $color2
+
+
+.bg-primary
+  background-color: $color1
+
+  .badge
+    color: #f05f40
+    background-color: #fff
+
+
+.bg-dark
+  color: #fff
+  background-color: $color4
+
+
+.navbar-default 
+  .navbar-header 
+    .navbar-brand
+      color: white
+      &:hover
+        color: green //#eb3812
+
+  .nav > li>a, .nav>li>a:focus
+    color: white
+    &:hover
+      color: $color2
+  .nav > li.active>a, .nav>li.active>a:focus
+    color: $color2!important
