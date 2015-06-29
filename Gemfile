@@ -17,3 +17,4 @@ gem 'susy', "~>1.0.1" # Susy
 
 gem "middleman-deploy"
 gem "rack-contrib"
+gem "puma"
