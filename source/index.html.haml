@@ -14,7 +14,7 @@
         %h2.section-heading We've got what you need!
         %hr.light
           %p.text-faded You want that retro sound for your game? Whether you need music and sound for full retro games or you aim to give your game a modern sound with a reminiscent retro touch - Hans Hiscore has you covered. As musicians, developers and gamers we understand your needs. Get the best retro game music for your game!
-          %a.btn.btn-default.btn-xl{:href => "#"} Get Started!
+          %a.btn.btn-default.btn-xl.page-scroll{:href => "#contact"} Get Started!
 %section#services
   .container
     .row
@@ -43,11 +43,12 @@
           %i.fa.fa-4x.fa-user.wow.bounceIn.text-primary{"data-wow-delay" => ".3s"}
           %h3 Voice Overs
           %p.text-muted Professional voices to bring your characters to life.
+
 %section#portfolio.no-padding
   .container-fluid
     .row.no-gutter
       .col-lg-4.col-sm-6
-        %a.portfolio-box{:href => "#"}
+        %a.portfolio-box{:href => "#", data: {toggle: "modal", target: "#Scorched3DModal"}}
           %img.img-responsive{:alt => "", :src => "images/portfolio/scorched3d-650x350.jpg"}
             .portfolio-box-caption
               .portfolio-box-caption-content
@@ -55,8 +56,11 @@
                   Mountaintop removal at its finest
                 .project-name
                   Scorched3D
+  
+        = partial "project_modal", locals: {name: "Scorched3DModal", track: "212798927"}
+
       .col-lg-4.col-sm-6
-        %a.portfolio-box{:href => "#"}
+        %a.portfolio-box{:href => "#portfolio"}
           %img.img-responsive{:alt => "", :src => "images/portfolio/robocode-650x350.png"}
             .portfolio-box-caption
               .portfolio-box-caption-content
@@ -64,8 +68,9 @@
                   Build the best - destroy the rest!
                 .project-name
                   Robocode
+    
       .col-lg-4.col-sm-6
-        %a.portfolio-box{:href => "#"}
+        %a.portfolio-box{:href => "#portfolio"}
           %img.img-responsive{:alt => "", :src => "images/portfolio/live-650x350.jpg"}
             .portfolio-box-caption
               .portfolio-box-caption-content
@@ -73,11 +78,18 @@
                   Realtime game music!
                 .project-name
                   Olymptronica
+
+%section
+  .container
+    .row
+      .col-lg-12.text-center
+        %iframe(width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/160741617&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false")
+
 %aside.bg-dark
   .container.text-center
     .call-to-action
       %h2 Get your free 30 minutes consulting session now!
-      %a.btn.btn-default.btn-xl.wow.tada{:href => "#contact"} Contact us!
+      %a.btn.btn-default.btn-xl.wow.tada{:href => "mailto:info@hanshiscore.com"} Contact us!
 %section#contact
   .container
     .row
@@ -85,10 +97,7 @@
         %h2.section-heading Let's Get In Touch!
         %hr.primary
           %p Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!
-      .col-lg-4.col-lg-offset-2.text-center
-        %i.fa.fa-phone.fa-3x.wow.bounceIn
-        %p 123-456-6789
-      .col-lg-4.text-center
+      .col-lg-8.col-lg-offset-2.text-center
         %i.fa.fa-envelope-o.fa-3x.wow.bounceIn{"data-wow-delay" => ".1s"}
         %p
-          %a{:href => "mailto:your-email@your-domain.com"} feedback@startbootstrap.com
+          %a{:href => "mailto:info@hanshiscore.com"} info@hanshiscore.com
