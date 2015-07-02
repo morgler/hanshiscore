@@ -60,13 +60,13 @@ helpers do
 end
 
 # Change the CSS directory
-# set :css_dir, "stylesheets"
+set :css_dir, "stylesheets"
 
 # Change the JS directory
-# set :js_dir, "javascripts"
+set :js_dir, "javascripts"
 
 # Change the images directory
-# set :images_dir, "images"
+set :images_dir, "images"
 
 # Github pages needs relative links
 set :relative_links, true
