@@ -100,6 +100,18 @@ configure :build do
 
   set :markdown_engine, :redcarpet
   set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+  # For example, change the Compass output style for deployment
+  activate :minify_css
+
+  # Minify Javascript on build
+  activate :minify_javascript
+
+  # Enable cache buster
+  activate :asset_hash
+
+  # Use relative URLs
+  activate :relative_assets
 end
 
 activate :deploy do |deploy|
