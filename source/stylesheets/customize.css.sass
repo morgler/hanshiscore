@@ -1,8 +1,10 @@
-$color1: #004478
-$color2: #b2341f
-$color3: #e39c07
+$color1: #00ffff
+$color2: #ff00ff
+$color3: #004478
 $color4: #4f4d40
-$color5: 6b231b
+$color5: #6b231b
+$color1bg: darken($color1, 20%)
+$color2bg: darken($color2, 20%)
 
 a
   color: $color2
@@ -11,11 +13,21 @@ a
     color: $color2
 
 
+header
+  background: black
+
+  .logo
+    margin: auto
+    width: 300px
+
+hr
+  border-color: $color1bg
+
 .bg-primary
-  background-color: $color1
+  background-color: darken($color1, 20%)
 
   .badge
-    color: #f05f40
+    color: $color2
     background-color: #fff
 
 
@@ -24,12 +36,22 @@ a
   background-color: $color4
 
 
-.navbar-default 
-  .navbar-header 
+.btn-primary
+  background: $color1bg
+
+  &:hover
+    background: $color2bg
+
+  &visited
+    background: $color1bg
+
+.navbar-default, .navbar-default.affix
+  background: black
+  .navbar-header
     .navbar-brand
-      color: white
+      color: $color2
       &:hover
-        color: green //#eb3812
+        color: $color1
 
   .nav > li>a, .nav>li>a:focus
     color: white
