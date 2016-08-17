@@ -4,15 +4,26 @@
   .header-content
     .header-content-inner
       %img.img-responsive.logo{src: 'images/logo.png'}
-      %h1 80s Synthpop Today!
+      %h1 Retro Game Music
       %hr
         %p Everything was better in the 80s – especially the music! That's why we create new music in the style of the best decade ever!
         -# %a.btn.btn-primary.btn-xl.page-scroll{:href => "#about"} Find Out More
+      
       %p
         %br
         %a{href: 'https://itunes.apple.com/de/artist/hans-hiscore/id441083607'}
           %img{src: 'images/itunes.svg'}
+        %a{href: 'https://www.amazon.de/Hotline-Bling-Hans-HiScore/dp/B01H6UJ4C6/'}
+          %img.shop-logo{src: 'images/amazonMusic.png'}
         %iframe(src="https://embed.spotify.com/follow/1/?uri=spotify:artist:2bUoqOtSDeJmb6bKIHkUjz&size=basic&theme=dark&show-count=0" width="200" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true")
+
+        %p
+          %h2 Visit us at
+          %a{href: 'http://www.gamescom.de/gamescom/ausstellersuche/hallenplaene/index.php?fw_goto=hallenplan/index&kid=0040173416&halle=10.2&standnr=A020+B021#plan'}
+            %img.gamescom-logo{src: 'images/gamescom.png'}
+
+          %p Hall 10.2, Booth A020-B021
+
 
 %section#about.bg-primary
   .container
@@ -20,11 +31,49 @@
       .col-lg-8.col-lg-offset-2.text-center
         %h2.section-heading Put Drake into a DeLorean…
         %hr.light
-          %p.text-faded …and listen to how his hit "Hotline Bling" would have sounded like in the 80s! We also created a fantastic music video faithfully imitating all of Drake's awesome dance moves!
+          %p.text-faded …and listen to what his hit "Hotline Bling" would have sounded like in the 80s! We also created a fantastic music video faithfully imitating all of Drake's awesome dance moves!
           %iframe(width="560" height="315" src="https://www.youtube.com/embed/2vN9-bNuAa4" frameborder="0" allowfullscreen)
           %p
             %a{href: 'https://itunes.apple.com/de/album/hotline-bling-single/id1125520492'}
               %img{src: 'images/itunes.svg'}
+
+%section#about.bg-secondary
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2.text-center
+        %h2.section-heading Original C64 SID sound is awesome!
+        %hr.light
+          %p.text-faded We don't shy away from using original 80s gear. Listen to the unbelievable bite and power the C64 SID still has today! (Recorded live at Gamescom 2015, Germany)
+          %iframe(width="420" height="315" src="https://www.youtube.com/embed/GzKD1ydU8jc" frameborder="0" allowfullscreen)
+
+%section#services
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading At Your Service
+        %hr.primary
+  .container
+    .row
+      .col-lg-3.col-md-6.text-center
+        .service-box
+          %i.fa.fa-4x.fa-music.wow.bounceIn.text-primary
+          %h3 Music
+          %p.text-muted From old chip tunes to full orchestra soundtracks.
+      .col-lg-3.col-md-6.text-center
+        .service-box
+          %i.fa.fa-4x.fa-bullhorn.wow.bounceIn.text-primary{"data-wow-delay" => ".1s"}
+          %h3 SFX
+          %p.text-muted Baaaaang, Tok Tok, Boooom, Zzzziiing
+      .col-lg-3.col-md-6.text-center
+        .service-box
+          %i.fa.fa-4x.fa-exchange.wow.bounceIn.text-primary{"data-wow-delay" => ".2s"}
+          %h3 Interactive Audio
+          %p.text-muted Because game music is very different from movie scores.
+      .col-lg-3.col-md-6.text-center
+        .service-box
+          %i.fa.fa-4x.fa-user.wow.bounceIn.text-primary{"data-wow-delay" => ".3s"}
+          %h3 Voice Overs
+          %p.text-muted Professional voices to bring your characters to life.
 
 %section#portfolio.no-padding
   .container-fluid
@@ -70,7 +119,7 @@
 %aside.bg-dark
   .container.text-center
     .call-to-action
-      %h2 Get your free 30 minutes consulting session now!
+      %h2 Get in touch to chat about your game or our next live performances!
       %a.btn.btn-default.btn-xl.wow.tada{:href => "mailto:info@hanshiscore.com"} Contact us!
 %section#contact
   .container
@@ -83,3 +132,17 @@
         %i.fa.fa-envelope-o.fa-3x.wow.bounceIn{"data-wow-delay" => ".1s"}
         %p
           %a{:href => "mailto:info@hanshiscore.com"} info@hanshiscore.com
+
+%section#about.bg-primary
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2.text-center
+        %h2.section-heading Follow our moves
+        %hr.light
+          %p.text-faded Not quite ready to shoot us an email? Simply start following our moves on
+          %p
+            = link_to 'Facebook', 'https://www.facebook.com/hanshiscore'
+            \|
+            = link_to 'Twitter', 'https://twitter.com/hanshiscore'
+            \|
+            = link_to 'Soundcloud', 'https://soundcloud.com/hanshiscore'
