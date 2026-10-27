@@ -1,0 +1,25 @@
+#!/bin/sh
+set -eu
+
+project_root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+ruby_version=$(tr -d '\r\n' < "$project_root/.ruby-version")
+runtime_bin=""
+for candidate in "$HOME/.asdf/installs/ruby/$ruby_version/bin" "$HOME/.rbenv/versions/$ruby_version/bin"; do
+  if [ -x "$candidate/ruby" ]; then
+    runtime_bin=$candidate
+    break
+  fi
+done
+if [ -z "$runtime_bin" ]; then
+  echo "Install Ruby $ruby_version with asdf or rbenv before running this project." >&2
+  exit 1
+fi
+
+export PATH="$runtime_bin:/opt/homebrew/bin:$PATH"
+export BUNDLE_GEMFILE="$project_root/Gemfile"
+export BUNDLE_PATH="$project_root/vendor/bundle"
+cd "$project_root"
+if [ "$#" -eq 0 ]; then
+  set -- bundle check
+fi
+exec "$@"

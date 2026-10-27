@@ -1,3 +1,9 @@
+# Font Awesome ships prebuilt CSS; keep its Less/SCSS sources out of the renderer.
+ignore %r{font-awesome/(?:less|scss)/}
+
+# Middleman 4 uses SassC and needs Bootstrap's Sass import path explicitly.
+set :sass_assets_paths, [Bootstrap.stylesheets_path]
+
 ###
 # Compass
 ###
@@ -96,7 +102,7 @@ configure :build do
   # Gzip HTML, CSS, and JavaScript
   # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/file-size-optimization.html.markdown#gzip-text-files
   # activate :gzip
-  set :haml, { :ugly => true, :format => :html5 }
+  set :haml, { :format => :html5 }
 
   set :markdown_engine, :redcarpet
   set :markdown, :fenced_code_blocks => true, :smartypants => true
@@ -115,7 +121,7 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.method = :git
+  deploy.deploy_method = :git
   deploy.branch = 'gh-pages'
   deploy.build_before = true
   deploy.user  = 'morgler'

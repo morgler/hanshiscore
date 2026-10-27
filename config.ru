@@ -11,7 +11,7 @@ module Rack
     def initialize(app, options)
       @app = app
       @try = ['', *options.delete(:try)]
-      @static = ::Rack::Static.new(lambda { [404, {}, []] }, options)
+      @static = ::Rack::Static.new(lambda { |_env| [404, {}, []] }, options)
     end
 
     def call(env)
@@ -35,8 +35,8 @@ use Rack::TryStatic, :root => "build", :urls => %w[/], :try => ['.html', 'index.
 run lambda{ |env|
   not_found_page = File.expand_path("../build/404.html", __FILE__)
   if File.exist?(not_found_page)
-    [ 404, { 'Content-Type'  => 'text/html'}, [File.read(not_found_page)] ]
+    [ 404, { 'content-type'  => 'text/html'}, [File.read(not_found_page)] ]
   else
-    [ 404, { 'Content-Type'  => 'text/html' }, ['404 - page not found'] ]
+    [ 404, { 'content-type'  => 'text/html' }, ['404 - page not found'] ]
   end
 }

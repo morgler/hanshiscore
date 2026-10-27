@@ -1,20 +1,19 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '3.4.10'
 
-gem "haml"
-gem "sass"
-gem "builder"
-
-gem "redcarpet"
-gem "middleman"
-gem "middleman-blog"
-gem 'bootstrap-sass'
-gem 'therubyracer'
-
-# Compass plugins
-gem 'susy', "~>1.0.1" # Susy
-# gem 'compass-960-plugin' # 960.gs
-
-gem "middleman-deploy"
-gem "rack-contrib"
-gem "puma"
+gem 'middleman', '~> 4.6'
+gem 'middleman-blog', '~> 4.0'
+gem 'middleman-deploy', '2.0.0.pre.alpha'
+gem 'haml', '~> 5.2'
+gem 'builder'
+gem 'redcarpet'
+gem 'bootstrap-sass', '~> 3.4'
+gem 'rack', '~> 3.2'
+gem 'rack-contrib', '~> 2.0'
+gem 'puma', '~> 8.0'
+gem 'base64'
+gem 'bigdecimal'
+gem 'csv'
+gem 'logger'
+gem 'rackup', '~> 2.0'
+gem 'net-ftp'
